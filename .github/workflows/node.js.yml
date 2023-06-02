@@ -23,6 +23,7 @@ jobs:
       
     - run: npm ci
     - run: npm install --save-exact esbuild 
+    - run: .\node_modules\.bin\esbuild
     - run: esbuild app.js --bundle --platform=node --outfile=build/out.js
     - run: |
           git config --global user.name 'nand-patidar'
