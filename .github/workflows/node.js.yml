@@ -22,7 +22,7 @@ jobs:
         architecture: 'x64'
       
     - run: npm ci
-    - run: npm install --save-exact esbuild --platform=node --outfile=build\out.js
+    - run: npm install --save-exact esbuild --platform=node --outfile=build/out.js
     - run: |
           git config --global user.name 'nand-patidar'
           git config --global user.email 'nand-patidar@users.noreply.github.com'
