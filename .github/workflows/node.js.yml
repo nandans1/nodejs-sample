@@ -21,5 +21,5 @@ jobs:
         architecture: 'x64'
       
     - run: npm ci
-    - run: npm install --save-exact esbuild
+    - run: npm install --save-exact esbuild --platform=node --outfile=build\out.js
  
