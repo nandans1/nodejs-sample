@@ -27,6 +27,7 @@ jobs:
     - run: ./node_modules/.bin/esbuild
     - run: ./node_modules/.bin/esbuild app.js --bundle --platform=node --outfile=build/out.js
     - run: |
+          git config --global -e 
           git add -A
           git commit -m "Git node build out file commit"
           git push
