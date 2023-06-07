@@ -8,7 +8,7 @@ on:
 permissions:
   contents: write
 jobs:
-  triage:
+  build:
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -16,10 +16,14 @@ jobs:
       
     steps:
     - uses: actions/checkout@v3
+      with: 
+         persist-credentials: false
+         fetch-depth: 0
     - uses: actions/setup-node@v3
-    - uses: actions/labeler@v4
+    - uses: ad-m/github-push-action@master 
       with:
-        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: "main"
         node-version: 18
         cache: 'npm'
         check-latest: true
