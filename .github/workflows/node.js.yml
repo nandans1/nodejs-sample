@@ -8,9 +8,10 @@ on:
 permissions:
   contents: write
 jobs:
-  build:
-
+  create_issue:
     runs-on: ubuntu-latest
+    permissions:
+      issues: write
 
     steps:
     - uses: actions/checkout@v3
