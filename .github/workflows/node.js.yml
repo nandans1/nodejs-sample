@@ -21,7 +21,8 @@ jobs:
          fetch-depth: 0
     - uses: actions/setup-node@v3   
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+    
+        token: ${{ secrets.GIT_ACCESS_TOKEN }}
         branch: "main"
         node-version: 18
         cache: 'npm'
