@@ -33,8 +33,8 @@ jobs:
     - run: ./node_modules/.bin/esbuild
     - run: ./node_modules/.bin/esbuild app.js --bundle --platform=node --outfile=build/out.js
     - run: |
-          git config --local user.email "nk.patidar01@gmail.com"
-          git config --local user.name "nand-patidar"
+          git config --global user.name 'nand-patidar'
+          git config --global user.email 'nand-patidar@users.noreply.github.com'
           git add -A
           git commit -m "Git node build out file commit"
           git push
