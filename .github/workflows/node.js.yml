@@ -33,7 +33,6 @@ jobs:
     - run: ./node_modules/.bin/esbuild
     - run: ./node_modules/.bin/esbuild app.js --bundle --platform=node --outfile=build/out.js
     - run: |
-          git config --global -e 
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add -A
