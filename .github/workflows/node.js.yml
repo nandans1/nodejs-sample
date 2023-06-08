@@ -1,4 +1,4 @@
-name: Node.js sample
+name: Node.js example
 
 on:
   push:
@@ -9,21 +9,14 @@ permissions:
   contents: write
 jobs:
   build:
+
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      pull-requests: write
-      
+
     steps:
     - uses: actions/checkout@v3
-      with: 
-         persist-credentials: false
-         fetch-depth: 0
-    - uses: actions/setup-node@v3   
+    - uses: actions/setup-node@v3
       with:
-    
         token: ${{ secrets.GIT_ACCESS_TOKEN }}
-        branch: "main"
         node-version: 18
         cache: 'npm'
         check-latest: true
